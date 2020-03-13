@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测评报告</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body>
+    <div class="loading">
+        <img src="../images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div class="pageBox" id="evaluationReport" v-show="showView" v-cloak>
+        <image :src="riskLevel" class="reportRisk" v-if="showRiskLevel"></image>
+        <div v-show="showReportContent">
+            <!--  -->
+            <div class="template" v-html="reportContent">
+
+            </div>
+        </div>
+        <!-- 内容模板1 -->
+        <!-- <section class="contentBox templateOne">
+                <div class="temTitle">饮食原则22222</div>
+                <ul>
+                    <li>
+                        <span class="number">1</span>
+                        <span class="temConLi">合理控制总能量；</span>
+                    </li>
+                    <li>
+                        <span class="number">2</span>
+                        <span class="temConLi">选择低GI食物，且增加膳食纤维摄入量；</span>
+                    </li>
+                </ul>
+            </section> -->
+        <!-- 内容模板2 -->
+        <!-- <section class="contentBox templateTwo">
+            <div class="temTitle">戒烟的好处</div>
+            <div class="explain">
+                <p>从健康的考虑出发，成年人每日饮酒应该不超过酒精25克和15克。</p>
+            </div>
+            <div class="reportTable">
+                <table>
+                    <tr>
+                        <th>酒类</th>
+                        <th>25克酒精相当于</th>
+                        <th>15克酒精相当于</th>
+                    </tr>
+                    <tr>
+                        <td>啤酒</td>
+                        <td>750ml</td>
+                        <td>450ml</td>
+                    </tr>
+                    <tr>
+                        <td>葡萄酒</td>
+                        <td>250ml</td>
+                        <td>150ml</td>
+                    </tr>
+                    <tr>
+                        <td>38°白酒</td>
+                        <td>250ml</td>
+                        <td>150ml</td>
+                    </tr>
+                    <tr>
+                        <td>52°百度</td>
+                        <td>250ml</td>
+                        <td>150ml</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="remark">
+                <p>注：IFG和IGT统称为糖调节受损（IGR，糖尿病前期）</p>
+            </div>
+        </section> -->
+        <!-- 内容模板3-->
+        <!-- <section class="newTemplateThree">
+            <span>推荐平均每天摄入12种以上食物推荐平均每天摄入12种以上食物，每周25种以上。</span>
+            <span>推荐平均每天摄入12种以上食物推荐平均每天摄入12种以上食物，每周25种以上。</span>
+        </section> -->
+        <!-- 内容模板4 -->
+        <!-- <section class="contentBox templateFour">
+            <div class="temTitle">糖尿病的相关检查</div>
+            <div class="subDetail">
+                定时体检是有效控制疾病风险的方式，推荐您根据自身情况可从如下建议中选择检测。
+            </div>
+            <ul>
+                <li class="mart_44">
+                    <span class="subtitle">普通人群</span>
+                    <div class="mart_16 vam">
+                        <span class="subSubTitle">血压、心率、体脂率、腰围、身高、体重、血压、心率、体脂率、腰围、身高、体重</span>
+                    </div>
+                </li>
+                <li class="mart_44">
+                    <span class="subtitle">妊娠糖尿病</span>
+                    <div class="mart_16 vam">
+                        <span class="subSubTitle">肌酐、尿酸、肝功能、空腹血糖、血脂四项、血钾</span>
+                    </div>
+                </li>
+            </ul>
+        </section> -->
+        <!-- 风险因素模板 -->
+        <!-- <section class="contentBox riskFactorTem">
+            <div class="temTitle">2型糖尿病风险因素</div>
+            <ul>
+                <li>
+                    <div class="riskFactorTitleLevel">
+                        <div class="flex_box">
+                            <span class="number">1</span>
+                            <span class="riskFactor">糖尿病家族史</span>
+                        </div>
+                        <div class="riskLevelCon">
+                            <span>危险等级:</span>
+                            <image src="../images/evalutingReport/checkedRisk.png" class="riskImg"></image>
+                            <image src="../images/evalutingReport/checkedRisk.png" class="riskImg"></image>
+                            <image src="../images/evalutingReport/checkedRisk.png" class="riskImg"></image>
+                            <image src="../images/evalutingReport/checkedRisk.png" class="riskImg"></image>
+                            <image src="../images/evalutingReport/uncheckedRisk.png" class="riskImg"></image>
+                        </div>
+                    </div>
+                    <div class="riskFactorRangeResult">
+                        <div class="referRange">
+                            <span>参考范围</span>
+                            <span>无</span>
+                        </div>
+                        <div class="riskLevelCon riskLevel">
+                            <span>本次结果:</span>
+                            <span>有</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="riskFactorTitleLevel">
+                        <div>
+                            <span class="number">2</span>
+                            <span class="riskFactor">噻嗪类，利尿剂，激素类等药品</span>
+                        </div>
+                        <div class="riskLevelCon riskLevel">
+                            <span>危险等级:</span>
+                            <span>无危险</span>
+                        </div>
+                    </div>
+                    <div class="riskFactorRangeResult">
+                        <div class="referRange">
+                            <span>参考范围：</span>
+                            <span>无</span>
+                        </div>
+                        <div class="riskLevelCon riskLevel">
+                            <span>本次结果:</span>
+                            <span>有</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section> -->
+        <!-- 健康指数模板 -->
+        <!-- <section class="contentBox healthIndexTem">
+            <div class="temTitle">健康血糖指数</div>
+            <div class="subDetail">
+                定时体检是有效控制疾病风险的方式，推荐您根据自身情况可从如下建议中选择检测。
+            </div>
+            <div class="mart_40 clear">
+                <span class="glsSubTitle">空腹血糖(FPG)</span>
+                <div class="mart_40">
+                    <div class="scrollContent">
+                        <div style="width:15.125rem;">
+                            <div style="width:4.4rem;" class="sub">
+                                <span class="subblock">正常血糖</span>
+                                <span class="glsImg border_left" style="background-color: #9EB0FA;"></span>
+                                <span class="glsNum">6.1</span>
+                            </div>
+                            <div style="width:6.7rem;" class="sub">
+                                <span class="subblock">糖耐量减低（IGT）</span>
+                                <span class="glsImg" style="background-color: #43CEA9;"></span>
+                                <span class="glsNum">7.0</span>
+                            </div>
+                            <div style="width:3.8rem;" class="sub">
+                                <span class="subblock">糖尿病</span>
+                                <span class="glsImg border_right" style="background-color: #FFA872;"></span>
+                                <span class="glsNum">90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mart_60 clear">
+                <span class="glsSubTitle">餐后血糖(2HPG)</span>
+                <div class="mart_40">
+                    <div class="scrollContent">
+                        <div style="width:30.25rem;">
+                            <div style="width:4.4rem;" class="sub">
+                                <span class="subblock">正常血糖</span>
+                                <span class="glsImg border_left" style="background-color: #9EB0FA;"></span>
+                                <span class="glsNum">6.1</span>
+                            </div>
+                            <div style="width:6.7rem;" class="sub">
+                                <span class="subblock">糖耐量减低（IGT）</span>
+                                <span class="glsImg" style="background-color: #43CEA9;"></span>
+                                <span class="glsNum">7.0</span>
+                            </div>
+                            <div style="width:3.8rem;" class="sub">
+                                <span class="subblock">糖尿病</span>
+                                <span class="glsImg" style="background-color: #FFA872;"></span>
+                                <span class="glsNum">90</span>
+                            </div>
+                            <div style="width:4.4rem;" class="sub">
+                                <span class="subblock">正常血糖</span>
+                                <span class="glsImg" style="background-color: #9EB0FA;"></span>
+                                <span class="glsNum">6.1</span>
+                            </div>
+                            <div style="width:6.7rem;" class="sub">
+                                <span class="subblock">糖耐量减低（IGT）</span>
+                                <span class="glsImg" style="background-color: #43CEA9;"></span>
+                                <span class="glsNum">7.0</span>
+                            </div>
+                            <div style="width:3.8rem;" class="sub">
+                                <span class="subblock">糖尿病</span>
+                                <span class="glsImg border_right" style="background-color: #FFA872;"></span>
+                                <span class="glsNum">90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seeMore">左划查看更多</div>
+                </div>
+                <section class="templateThree">
+                    <ul>
+                        <li>
+                            <span class="blueCircle"></span>
+                            <span class="temThreeTitle">空腹血糖是指在隔夜空腹（至少8～10小时未进任何食物，饮水除外）后，早餐前采的血，所检定的血糖值，为糖尿病最常用的检测指标，反应胰岛β细胞功能，一般代表基础胰岛素的分泌功能。</span>
+                        </li>
+                    </ul>
+            </div>
+            </section>
+        </section> -->
+        <!-- 饮食结构模板 -->
+        <!-- <section class="contentBox dietStructureTem">
+            <div class="temTitle">产后膳食结构分析</div>
+            <ul>
+                <li>
+                    <div class="flex_box">
+                        <span class="num">1</span>
+                        <span class="classify">谷薯类</span>
+                        <span class="result">评估结果：</span>
+                        <img src="../images/managementPlan/过多.png" alt="" />
+                    </div>
+                    <div class="range">
+                        <span>参考范围：</span>
+                        <span>以清炒、清蒸、炖、煮、汆、拌等少油制法为主。</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex_box">
+                        <span class="num">2</span>
+                        <span class="classify">鱼、禽、蛋、肉类</span>
+                        <span class="result">评估结果：</span>
+                        <img src="../images/managementPlan/差.png" alt="" />
+                    </div>
+                    <div class="range">
+                        <span>参考范围：</span>
+                        <span>以清炒、清蒸、炖、煮、汆、拌等少油制法为主。</span>
+                    </div>
+                </li>
+            </ul>
+        </section> -->
+        <!-- 中医体质模板 -->
+        <!-- <section class="zyTypeTem" style="background: url();">
+            <span>体质类型</span>
+            <span>和平质</span>
+            <span>阴阳气血调和，以体态适中、面色红润、精力充沛等</span>
+        </section> -->
+        <!-- 内容模板6 -->
+        <!-- <section class="templateSix">
+            <div class="title">提高睡眠质量攻略</div>
+            <div class="lifeTemplate">
+                <div style="align-self:flex-start;">
+                    <img src="" class="bigImage">
+                    <span class="classify">心情情绪</span>
+                </div>
+                <div class="lifeInfo">
+                    <p class="lifeVal lifeMarb">高血压和情绪有着密切的关系，人在有情绪的时候，交感神经兴奋，引起血管收缩，心跳加快，同时血压跟着增高。</p>
+                </div>
+            </div>
+        </section> -->
+        <div class="manage-btn report-btn" @click="questionReview()" v-show="!showBtn">测评回顾</div>
+        <div class="mart_32 btnFlex" v-show="showBtn">
+            <div class="newBtn" @click="questionReview()">测评回顾</div>
+            <div class="btn_plan" @click="goManagementPlan()">管理方案</div>
+        </div>
+    </div>
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/bodymovin.min.js"></script>
+    <script src="../js/libs/jsrsasign-all-min.js"></script>
+    <script src="../js/libs/vue.min.js"></script>
+    <script src="../config.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/evaluationReport.js"></script>
+</body>
+
+</html>

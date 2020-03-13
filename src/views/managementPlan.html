@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>管理方案</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body>
+    <div class="loading">
+        <img src="../images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div id="managementPlan" v-show="showView" v-cloak style="padding-bottom: 1.2rem;">
+        <div id="headTop">
+            <!-- 标题 -->
+            <div class="managementHead">
+                <img class="riskLevel" v-show="showRiskLevel" :src="riskLevelImage">
+                <span class="userInfo">
+                    <span class="userName">{{userName}}</span>
+                <span class="userSex">{{gender}}</span>
+                </span>
+            </div>
+            <!-- 健康管理建议 -->
+            <div class="healthAdvice_box" v-if="healthAdvice!=''">
+                <img src="../images/managementPlan/frontQuote.png" class="frontQuote">
+                <div class="healthAdvice">
+                    <span>{{healthAdvice}}</span>
+                    <img src="../images/managementPlan/backQuote.png" class="backQuote">
+                </div>
+            </div>
+            <!-- 健康管理重点干预内容 -->
+            <div class="interventionContent">
+                <div class="interventTitle">{{importentContentTitle}}</div>
+                <ul>
+                    <li class="vam" v-for="(item,index) in importentContentValueList" :class="index==0?'padt_40':'padt_20'">
+                        <span class="number">
+                            <span>{{index+1}}</span>
+                        </span>
+                        <span class="interSubTitle">{{item}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 页签tab -->
+        <div class="planName" id="tabBox">
+            <ul>
+                <li v-for="(name,index) in planName" :id="index" :class="{active:index == showIndex}" @click="selectPlanNanme(index)">
+                    <span>{{name}}</span>
+                    <i v-show="index == showIndex"></i>
+                </li>
+            </ul>
+        </div>
+        <!-- 内容 -->
+        <div class="managePlanContent" :class="contentMart" id="managePlanContent">
+            <section class="template" id="planContentStr">
+
+            </section>
+            <!-- <section style="height:1rem;width:100%;background: yellow;"></section> -->
+            <!-- <section style="width:100%;height:1rem;"></section> -->
+            <!-- 内容模板1:标题，有序号-->
+            <!-- <section class="contentBox templateOne">
+                <div class="temTitle">饮食原则22222</div>
+                <ul>
+                    <li>
+                        <span class="number">1</span>
+                        <span class="temConLi">合理控制总能量；</span>
+                    </li>
+                    <li>
+                        <span class="number">2</span>
+                        <span class="temConLi">选择低GI食物，且增加膳食纤维摄入量；</span>
+                    </li>
+                </ul>
+            </section> -->
+            <!-- 内容模板2 -->
+            <!-- <section class="contentBox templateTwo">
+                <div class="temTitle">饮食原则</div>
+                <div class="explain">限制膳食中嘌呤的摄入量，正常人每天嘌呤摄入量为600-1000mg，痛风病人应长期选用低嘌呤膳食，膳食中嘌呤含量应控制在每日150mg以下，缓解期可适当放开，但高嘌呤膳食也属于禁忌。</div>
+                <div class="planTable">
+                    <table>
+                        <tr>
+                            <td colspan="" rowspan="">年龄</td>
+                            <td colspan="" rowspan="">
+                                35岁以上的成年人患高血压的风险会随年龄的增长而增加
+                            </td>
+                            <td>题目1</td>
+                        </tr>
+                        <tr>
+                            <td colspan="" rowspan="">BMI和腰围</td>
+                            <td colspan="" rowspan="">
+                                体重超重人群（BMI≥24 ）发生高血压的风险是体重正常者的3~4倍
+                                <br/> 腰围男性≥90cm或女性≥85cm，发生高血压的风险是腰围正常者的4倍以上。
+                                <br/>
+                            </td>
+                            <td>题目2、3、4</td>
+                        </tr>
+                    </table>
+                </div>
+            </section> -->
+            <!-- 内容模板3:内容-->
+            <!-- <section class="newTemplateThree">
+                <span>推荐平均每天摄入12种以上食物推荐平均每天摄入12种以上食物，每周25种以上。</span>
+                <span>推荐平均每天摄入12种以上食物推荐平均每天摄入12种以上食物，每周25种以上。</span>
+            </section> -->
+            <!-- 内容模板4 -->
+            <!-- <section class="contentBox templateFour">
+                <div class="temTitle">糖尿病的相关检查</div>
+                <div class="subDetail">
+                    定时体检是有效控制疾病风险的方式，推荐您根据自身情况可从如下建议中选择检测。
+                </div>
+                <ul>
+                    <li class="mart_44">
+                        <span class="subtitle">普通人群</span>
+                        <div class="mart_16 vam">
+                            <span class="subSubTitle">血压、心率、体脂率、腰围、身高、体重、血压、心率、体脂率、腰围、身高、体重</span>
+                        </div>
+                    </li>
+                    <li class="mart_44">
+                        <span class="subtitle">妊娠糖尿病</span>
+                        <div class="mart_16 vam">
+                            <span class="subSubTitle">肌酐、尿酸、肝功能、空腹血糖、血脂四项、血钾</span>
+                        </div>
+                    </li>
+                </ul>
+            </section> -->
+            <!-- 空白模板 -->
+            <!-- <section class="whiteContent">
+                <image src="../images/managementPlan/good.png" class="goodImg"></image>
+                <div class="whiteText">您目前的生活方式良好，请继续保持！</div>
+            </section> -->
+            <!-- 饮食数据模板1：已废弃不使用-->
+            <!-- <section class="dietTemplateOne">
+                <div>
+                    <img src="../images/managementPlan/谷薯类.png" class="bigImage">
+                    <span class="classify">谷薯类</span>
+                </div>
+                <div class="subClassifyData">
+                    <p class="count">50~150
+                        <span class="unit">克</span>
+                    </p>
+                    <p class="subClassify">全谷物和杂豆</p>
+                    <p class="count">50~150
+                        <span class="unit">克</span>
+                    </p>
+                    <p class="subClassify">全谷物和杂豆</p>
+                </div>
+            </section> -->
+            <!-- 饮食数据模板2 -->
+            <!-- <section class="dietTemplateTwo marr">
+                <div>
+                    <img src="../images/managementPlan/milk.png" class="smallImage">
+                    <span class="dietClassify">蛋类</span>
+                </div>
+                <span class="count countPos">40~50
+                <span class="unit">克</span>
+                </span>
+            </section> -->
+            <!-- 运动数据模板 -->
+            <!-- <section class="sportTemplate">
+                <div class="" sportImg>
+                    <img src="../images/managementPlan/谷薯类.png" class="bigImage">
+                    <span class="classify">有氧运动</span>
+                </div>
+                <div class="sportInfo">
+                    <p class="sportVal sportMart">推荐:</p>
+                    <p class="sportVal">散步、快走、慢跑、打太极拳、游泳等</p>
+                    <p class="mart sportCount">20~60
+                        <span class="sportUnit">分钟／天</span>
+                    </p>
+                </div>
+            </section> -->
+            <!-- 生活方式数据模板 -->
+            <!-- <section class="lifeTemplate">
+                <div style="align-self:flex-start;">
+                    <img src="../images/managementPlan/谷薯类.png" class="bigImage">
+                    <span class="classify">心情情绪</span>
+                </div>
+                <div class="lifeInfo">
+                    <p class="lifeVal lifeMarb">高血压和情绪有着密切的关系，人在有情绪的时候，交感神经兴奋，引起血管收缩，心跳加快，同时血压跟着增高。</p>
+                    <p class="mart sportCount">6~8<span class="sportUnit">小时／天</span></p>
+                </div>
+            </section> -->
+            <!-- 膳食模板 -->
+            <!-- <section class="foodRecommend mart_56">
+                <div class="foodRecommend_title marl_16">每日膳食量推荐</div>
+                <div class="foodRecommend_explain marl_16">根据你的健康档案相关数，计算出您每日应摄入XXX千卡</div>
+                <div class="foodRecommend_content">
+                    <ul>
+                        <li>
+                            <div class="foodRecommend_flex">
+                                <div class="foodRecommendClassFlex">
+                                    <image src="../images/managementPlan/gsl.png" class="smallImage"></image>
+                                    <span class="foodRecommend_classify">谷薯类</span>
+                                    <image src="../images/managementPlan/takeupDetail.png" class="foodRecommend_detail"></image>
+                                </div>
+                                <div>
+                                    <span class="foodRecommend_count">50~150</span>
+                                    <span class="unit">克</span>
+                                </div>
+                            </div>
+
+                            <div class="classifyDetialCon">
+                                <span class="classifyDetial">160g牛奶=乳酪25g，奶粉20g，脱脂奶粉25g</span>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="foodRecommend_flex">
+                                <div class="foodRecommendClassFlex">
+                                    <image src="../images/managementPlan/gsl.png" class="smallImage"></image>
+                                    <span class="foodRecommend_classify">肉蛋类</span>
+                                    <image src="../images/managementPlan/takeupDetail.png" class="foodRecommend_detail"></image>
+                                </div>
+                                <div>
+                                    <span class="foodRecommend_count">40~50</span>
+                                    <span class="unit">克</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <section class="templateThree">
+                        <ul>
+                            <li>
+                                <img src="../images/managementPlan/bluecircle.png" alt="">
+                                <span class="temThreeTitle">推荐平均每天摄入12种以上食物推荐平均每天摄入12种以上食物，每周25种以上。</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section> -->
+            <!-- 图片列表模板 -->
+            <!-- <section class="imageListTemplate">
+                <div class="foodRefer marl_16">查看食物量参照<i class="icon_xs iconfont icon-zhankaixuanze-copy"></i></div>
+                <div class="mart_32">
+                    <image src="../images/managementPlan/beef.png" class="foodReferImg marr_14"></image>
+                    <image src="../images/managementPlan/milk.png" class="foodReferImg"></image>
+                    <image src="../images/managementPlan/beef.png" class="foodReferImg marr_14 mart_20"></image>
+                    <image src="../images/managementPlan/milk.png" class="foodReferImg mart_20"></image>
+                    <image src="../images/managementPlan/beef.png" class="foodReferImg marr_14 mart_20"></image>
+                    <image src="../images/managementPlan/milk.png" class="foodReferImg mart_20"></image>
+                    <image src="../images/managementPlan/beef.png" class="foodReferImg marr_14 mart_20"></image>
+                    <image src="../images/managementPlan/milk.png" class="foodReferImg mart_20"></image>
+                </div>
+            </section> -->
+            <!-- 标签模板 -->
+            <!-- <section class="contentBox labelTemplate mart_32">
+                <div class="cookWay">推荐烹调方式</div>
+                <div class="cookwayList">
+                    <ul class="cookWayFlex">
+                        <li class="way">清炒</li>
+                        <li class="way">清蒸</li>
+                        <li class="way">炖</li>
+                        <li class="way">煮</li>
+                        <li class="way">汆</li>
+                        <li class="way">拌</li>
+                    </ul>
+                </div>
+            </section> -->
+            <!-- 内容模板7 -->
+            <!-- <section class="contentBox templateSeven">
+                <div class="temTitle">经常揉按眼部穴位，每穴2至3分钟，1日3至5次。</div>
+                <div class="tem">
+                    <span>1、睛明穴：在鼻根部紧挨两眼内眦处，用大拇指轻轻按睛明穴，先向下按，然后向上挤。</span>
+                    <img src="" alt="" class="">
+                </div>
+                <div class="tem">
+                    <span>2.四白穴：在眼眶下缘正中直下一横指处，用食指揉按四白穴。</span>
+                    <img src="" alt="" class="">
+                </div>
+                <div class="tem">
+                    <span>3.太阳穴：在眉梢和外眼角的中间向后一横指处，先用拇指按压太阳穴，然后用弯曲的食指第二节内侧面轻刮眼眶一圈，使眼眶周围穴位也受到按摩。</span>
+                    <img src="" alt="" class="">
+                </div>
+            </section> -->
+            <!-- 肠道保健操 -->
+            <!-- <section class="contentBox exercisesTem">
+                <div class="explainInfo">肠道保健操可以增强腹压刺激和肠道机能运作，使血液循环更顺畅，经常会做有助于消化，达到润肠通便的作用。</div>
+                <ul class="exercises">
+                    <li>
+                        <span>第一步</span>
+                        <span>平躺将手掌置于下腹部，逆时针方向揉转30回，顺时针方向揉转30回，慢慢揉转并维持10秒以上。</span>
+                    </li>
+                    <li>
+                        <span>第二步</span>
+                        <span>用手握拳，从肚脐开始，顺时针方向按压出日文的“の”字，重复3回，慢慢揉转并维持10秒以上。 </span>
+                    </li>
+                </ul>
+            </section> -->
+            <!-- 肝脏排毒模板 -->
+            <!-- <section class="contentBox templateEight">
+                <ul>
+                    <li>
+                        <span class="number">1</span>
+                        <div class="marl_64">
+                            <span class="subTitle">梳头</span>
+                            <div class="temConLi">用木质梳子梳头，每分钟20~30次，每日1次，每次3~5分钟，之后慢慢加快。先顺着头发梳，将头发梳顺，接着逆向梳，然后再顺着梳。梳时用力要均匀适当，不要用力过猛，以防划破头皮。</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="number">2</span>
+                        <div class="marl_64">
+                            <span class="subTitle">叩头</span>
+                            <div class="temConLi">全身直立，两手握空拳，两手手指指端轻叩头顶部。叩头时只能腕关节活动，不能肘关节大幅度伸屈锻炼。叩头时，两手从前额向中向后轻叩，然后由后枕部向左右顶边缘部向前额轻叩，往复循环地轻叩。叩的次数因人而定，通常自觉劳累就停止。</div>
+                        </div>
+                    </li>
+                </ul>
+            </section> -->
+
+        </div>
+    </div>
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/bodymovin.min.js"></script>
+    <script src="../js/libs/jsrsasign-all-min.js"></script>
+    <script src="../js/libs/vue.min.js"></script>
+    <script src="../config.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/libs/vconsole.min.js"></script>
+    <script src="../js/managementPlan.js"></script>
+</body>
+
+</html>

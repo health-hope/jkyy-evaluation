@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>测评管理</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body>
+    <div class="loading">
+        <img src="../images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div class="" id="evaluationManage" v-show="showView" v-cloak>
+        <!-- 标题图片 -->
+        <!-- <div class="manageHeadBox">
+            
+        </div> -->
+        <banner :banner-img="imageUrl"></banner>
+        <!-- 评测管理列表 -->
+        <div class="contentBox manageContentBox">
+            <ul>
+                <li v-show="showEvalReport" @click="goToEvalReport()" :class="showManagePlan?'manageContentBox-firstli':''">
+                    <span class="iconfont icon-cepingbaogao manage-icon"></span>
+                    <span class="reportText">测评报告</span>
+                    <span class="iconfont icon-gengduo gengduo"></span>
+                </li>
+                <li v-show="showManagePlan" @click="goManagePlan()">
+                    <span class="iconfont icon-guanlifangan manage-icon"></span>
+                    <span class="reportText">管理方案</span>
+                    <span class="iconfont icon-gengduo gengduo"></span>
+                </li>
+            </ul>
+        </div>
+        <!-- 重新评估 -->
+        <div class="manage-btn conmar" style="display: flex;justify-content: center;align-items: center;" @click="reEval()">重新测评</div>
+        <!-- 温馨提示 -->
+        <p class="cue">温馨提示：本次测评报告不能用于其他任何医学判断目的使用</p>
+    </div>
+    <!-- banner模板 s -->
+    <template id="banner">
+        <div class="index-banner">
+            <img :src="bannerImg">
+        </div>
+    </template>
+    <!-- banner模板 e -->
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/bodymovin.min.js"></script>
+    <script src="../js/libs/fastClick.min.js"></script>
+    <script src="../js/libs/jsrsasign-all-min.js"></script>
+    <script src="../config.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/libs/vue.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+    <script src="../js/evaluationManage.js"></script>
+    <script src="../js/libs/vconsole.min.js"></script>
+    <!-- <script>
+      // 初始化
+      var vConsole = new VConsole();
+      console.log('VConsole is cool');
+    </script> -->
+</body>
+
+</html>

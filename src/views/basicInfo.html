@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>基础信息</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/mobiscroll.2.13.2.css">
+</head>
+
+<body>
+    <div class="loading">
+        <img src="../images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div id="ev-basicInfo" v-cloak>
+        <div class="ev-basicInfo-flow-pattern">
+            <div class="main">
+                <div class="box" v-for="item in basicInfoData">
+                    <!-- 姓名s mg-100-->
+                    <div class="items " v-if="item.type == '1'">
+                        <p class="title">{{item.title}}</p>
+                        <div class="con">
+                            <div class="name-box">
+                                <input type="text" v-model="userName" maxlength="20" placeholder="输入姓名">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 姓名e -->
+                    <!-- 性别 s -->
+                    <div v-if="hideGender">
+                        <div class="items mg-122" v-if="item.type == '2'">
+                            <p class="title">{{item.title}}</p>
+                            <div class="con">
+                                <div class="gender-box">
+                                    <div class="gender" data-sex="2" v-for="g in genderList" @click="selectGender(g)">
+                                        <i v-if="gender == g.value" class="icon iconfont icon-BduanHtubiao active"></i>
+                                        <i v-else class="icon iconfont icon-danxuan-weixuan"></i>
+                                        <span :class="{hight:gender == g.value}">{{g.name}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 性别 e -->
+                    <!-- 生日 s -->
+                    <div class="items mg-122" v-if="item.type == '3'" :style="!hideGender?'margin-top:5rem':''">
+                        <p class="title">{{item.title}}</p>
+                        <div class="con">
+                            <div class="value-box" :class="item.name+'Value'">
+                                <span class="user-data">{{birthday}}</span>
+                                <i class="icon iconfont icon-zhankaixuanze-copy birthIcon"></i>
+                            </div>
+                            <input class="birthdayInput" type="text" style="display: none;" />
+                        </div>
+                    </div>
+                    <!-- 生日 e -->
+                </div>
+            </div>
+            <div class="btn-box">
+                <button class="btn" :disabled="!nextBtnState" :class="{isActive:nextBtnState}" @click="clickNextBtn">下一步</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/jsrsasign-all-min.js"></script>
+    <script src="../js//libs/bodymovin.min.js"></script>
+    <script src="../js//libs/fastClick.min.js"></script>
+    <script src="../js//libs/vue.min.js"></script>
+    <script src="../js//libs/mobiscroll.2.13.2.js"></script>
+    <script src="../config.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/basicInfo.js"></script>
+
+</body>
+
+</html>

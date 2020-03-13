@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>营养状态测评</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body>
+    <div class="loading">
+        <img src="../images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div id="nutritionalState" v-show="showView" v-cloak>
+        <!-- 无营养缺乏 -->
+        <div class="psySec" v-show="nutritiousStatus == '0'" style="min-height:24rem">
+            <div class="psyresult">本次测评的结果</div>
+            <div class="result">{{nutritious.result}}</div>
+            <div class="hr"></div>
+            <div class="psyCon">
+                <div>{{nutritious.resultDesc}}</div>
+            </div>
+        </div>
+        <!-- 有营养缺乏 -->
+        <div class="template" v-show="nutritiousStatus=='1'">
+            <section class="contentBox nutritiousTem">
+                <div class="temTitle">{{innutrition.title}}</div>
+                <div class="nutritious" v-for="item in innutrition.dataList">
+                    <div class="nutritiousInfo">
+                        <span>{{item.subTitle}}</span>
+                        <span>推荐量：{{item.subExplain}}</span>
+                    </div>
+                    <div class="subContent">{{item.subContent}}</div>
+                </div>
+            </section>
+        </div>
+        <!-- <div class="manage-btn report-btn " @click="questionReview() ">测评回顾</div> -->
+        <div class="mart_32 btnFlex ">
+            <div class="btn_plan " style="margin-right: .8rem; " @click="reEval()">重新测评</div>
+            <div class="newBtn " @click="questionReview()">测评回顾</div>
+        </div>
+    </div>
+    </div>
+    <script src="../js/libs/jquery.min.js "></script>
+    <script src="../js/libs/bodymovin.min.js "></script>
+    <script src="../js/libs/jsrsasign-all-min.js"></script>
+    <script src="../js/libs/vue.min.js "></script>
+    <script src="../config.js "></script>
+    <script src="../js/common.js "></script>
+    <script src="../js/nutritionalState.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>检查建议</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+</head>
+
+<body>
+    <div class="loading">
+        <img src="../images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div class="pageBox" id="physicalExam" v-show="showView" v-cloak>
+        <div class="contentBox">
+            <div class="reportContentBox" v-html="physicalExamContent"></div>
+            <!-- 模板2 -->
+            <!-- <div class="reportContentTitle">高血压诊断标准</div>
+            <div class="reportContent">高脂血症的主要危害是增加动脉粥样硬化性心血管疾病（ASCVD）的发病风险。以下标准为： 中国ASCVD一级预防人群血脂合适水平和异常分层标准[mmol/L（mg/d）]</div>
+            <div class="reportTable">
+                <table>
+                    <tr>
+                        <th colspan="" rowspan="2">糖代谢分类</th>
+                        <th colspan="2" rowspan="">静脉血浆葡萄糖（mmol/l)</th>
+                    </tr>
+                    <tr>
+                        <th>空腹血糖(FPG)</th>
+                        <th>餐后血糖(2HPG)</th>
+                    </tr>
+                    <tr>
+                        <td colspan="" rowspan="">正常血糖</td>
+                        <td colspan="" rowspan="">
+                            <6.1</td>
+                                <td colspan="" rowspan="">
+                                    <7.8</td>
+                    </tr>
+                    <tr>
+                        <td colspan="" rowspan="">空腹血糖受损(IFG)</td>
+                        <td colspan="" rowspan="">6.1~
+                            <7.0</td>
+                                <td colspan="" rowspan="">
+                                    <7.8</td>
+                    </tr>
+                    <tr>
+                        <td colspan="" rowspan="">糖耐量减低（(IGT)</td>
+                        <td colspan="" rowspan="">
+                            <7.0</td>
+                                <td colspan="" rowspan="">7.8~
+                                    <11.1</td>
+                    </tr>
+                    <tr>
+                        <td colspan="" rowspan="">糖尿病</td>
+                        <td colspan="" rowspan="">≥7.0</td>
+                        <td colspan="" rowspan="">7.8~
+                            <11.1</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="remark">
+                <p>注：IFG和IGT统称为糖调节受损（IGR，糖尿病前期）</p>
+            </div> -->
+        </div>
+    </div>
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/bodymovin.min.js"></script>
+    <script src="../js/libs/vue.min.js"></script>
+    <script src="../js/libs/jsrsasign-all-min.js"></script>
+    <script src="../config.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/physicalExam.js"></script>
+</body>
+
+</html>

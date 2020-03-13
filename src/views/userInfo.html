@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>用户信息</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/mobiscroll.2.13.2.css">
+</head>
+
+<body>
+    <div class="loading">
+        <img src="../images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div id="ev-basicInfo" v-cloak>
+        <div class="ev-basicInfo">
+            <div class="main">
+                <div class="box" v-for="(item,index) in userInfoData">
+                    <div class="items" v-if="item.type == '4'" :class="index!=0?'mg-200':''">
+                        <p class="title">{{item.title}}</p>
+                        <div class="con">
+                            <div class="value-box" class="Value" :class="item.name+'Value'">
+                                <span class="user-data" :class="item.name+'Data'">{{item.value}}</span>
+                                <span class="user-data unit">{{item.unit}}</span>
+                                <i class="icon iconfont icon-zhankaixuanze-copy"></i>
+                            </div>
+                            <div style="display: none;">
+                                <select :class="item.name+'Select'"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button class="btn" :disabled="!nextBtnState" :class="{isActive:nextBtnState}" @click="clickNextBtn">下一步</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/bodymovin.min.js"></script>
+    <script src="../js/libs/jsrsasign-all-min.js"></script>
+    <script src="../js/libs/fastClick.min.js"></script>
+    <script src="../js/libs/vue.min.js"></script>
+    <script src="../js/libs/mobiscroll.2.13.2.js"></script>
+    <script src="../config.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/userInfo.js"></script>
+
+</body>
+
+</html>

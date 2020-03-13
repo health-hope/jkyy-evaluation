@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="loading">
+        <img src="./images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div class="ev-index" id="evIndex" v-cloak v-show="showView">
+        <!-- 第一批测评 -->
+        <div v-if="isFist">
+            <banner :banner-img="imageUrl"></banner>
+            <div class="ev-basis">
+                <strong>评估依据</strong>
+                <p>{{evaluationBasis}}</p>
+                <button @click="startEval">开始评估</button>
+            </div>
+            <div class="ev-reference">
+                <strong>参考资料</strong>
+                <ul>
+                    <li v-for="item in references">
+                        {{item}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 第二批测评 -->
+        <div v-if="isSecond" class="new">
+            <div class="img-box">
+                <img :src="item" alt="" v-for="item in imageUrlList">
+            </div>
+            <div class="btn-box">
+                <button @click="startEval">开始评估</button>
+            </div>
+        </div>
+        <!-- 剩余所有测评 -->
+        <div v-if="isOther" class="other">
+            <div class="img-box">
+                <img src="images/index/evh.jpg">
+                <img src="./images/managementPlan/frontQuote.png" alt="" class="frontQuote">
+                <span>{{evaluationName}}</span>
+            </div>
+            <div class="summary">
+                <span>{{evaluationBasis}}</span>
+            </div>
+            <div class="content_box" v-if="showContentIntroduce">
+                <div class="content_title">内容介绍</div>
+                <div class="temOne" v-if="showContentTemOne">
+                    <span v-for="item in contentIntroduce.textContent">{{item}}</span>
+                </div>
+                <div class="temTwo" v-if="showContentTemTwo">
+                    <div class="temTwo_box" :class="index==0?'mart_59':'mart_74'" v-for="(item,index) in contentIntroduce.iconList">
+                        <div>
+                            <img :src="item.iconUrl" alt="">
+                            <span>{{item.iconName}}</span>
+                        </div>
+                        <div>{{item.iconExplain}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="refer_box" v-if="references">
+                <div class="content_title">参考文献</div>
+                <span v-for="refer in references">{{refer}}</span>
+            </div>
+            <img src="./images/index/Group.png" alt="" class="footer">
+            <div class="btn-box">
+                <button @click="startEval">开始评估</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner模板 s -->
+    <template id="banner">
+        <div class="index-banner">
+            <img :src="bannerImg">
+        </div>
+    </template>
+    <!-- banner模板 e -->
+
+    <script src="./js/libs/jquery.min.js"></script>
+    <script src="./js/libs/jsrsasign-all-min.js"></script>
+    <script src="./js/libs/bodymovin.min.js"></script>
+    <script src="./js/libs/vue.min.js"></script>
+    <script src="./js/libs/polyfill.min.js"></script>
+    <script src="./config.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

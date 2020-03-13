@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/mobiscroll.2.13.2.css">
+    <style>
+        * {
+            touch-action: pan-y;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <img src="../images/index/loading.gif" alt="" class="loading-box" id="loading">
+    </div>
+    <div id="ev-question" class="ev-question" v-cloak>
+        <div class="page" v-for="(item,index) in newQuesOptions" :class="{show:item.show,newFadeInUp:item.newFadeInUp,newFadeInDown:item.newFadeInDown,newFadeOutUp:item.newFadeOutUp,newFadeOutDown:item.newFadeOutDown}">
+            <!-- 导语 s -->
+            <div class="guide" v-if="guideWords.length > 0 && item.index == '1'">
+                <ul>
+                    <li v-for="guide in guideWords">{{guide}} </li>
+                </ul>
+            </div>
+            <!-- 导语 e -->
+            <div class="progress-box" :style="{top:topSize+'rem'}">
+                <div class="num question-index">{{item.index}} </div>
+                <div class="progress">
+                    <div class="bar"></div>
+                </div>
+                <div class="num question-total">{{newQuesOptions.length}}</div>
+            </div>
+            <div class="question-main" :style="{top:topManSize +'rem'}">
+                <div class="scroll">
+                    <div class="title">
+                        <span>{{item.questionContent}}</span>
+                        <span v-if="item.questionType == '2'" class="multi-label">(多选)</span>
+                    </div>
+                    <!-- 题目备注 -->
+                    <div class="annotation" v-if="item.questionRemark">
+                        {{item.questionRemark}}
+                    </div>
+                    <!-- 选项类型 -->
+                    <div class="answer" v-if="item.options.length>0">
+                        <ul v-if="item.questionType == '1'" class="single">
+                            <li class="answer-item" :class="{active:qs.active}" v-for="(qs,index) in item.options" @click="selectAnswerOption(item,qs)">
+                                <div class="qn">
+                                    <span>{{changeEn(index)}}</span>
+                                </div>
+                                <div class="option">
+                                    <span class="op-tit">{{qs.optionContent}}</span>
+                                    <span v-if="qs.remark && qs.remark!=''" class="optionRemark">{{qs.remark}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul v-if="item.questionType == '2'" class="multi">
+                            <li :class="{active:qs.active}" v-for="(qs,index) in item.options" @click="selectAnswerOption(item,qs)">
+                                <div class="multi-item">
+                                    <div class="option">
+                                        <span>{{changeEn(index)}}</span>
+                                        <span>{{qs.optionContent}}</span>
+                                    </div>
+                                    <span v-if="qs.remark && qs.remark!=''" class="optionRemark">{{qs.remark}}</span>
+                                    <i v-if="qs.active" class="icon iconfont icon-duoxuan-xuanzhong"></i>
+                                    <i v-else class="icon iconfont icon-duoxuan-xuanzhong"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 时间选择类型 -->
+                    <div class="time_box" v-show="item.questionType == '3'">
+                        <input type="text" :id="'time_'+index" class="time" style="display: none">
+                    </div>
+                </div>
+                <div class="more-remind" v-show="isRemind">
+                    <i class="icon iconfont icon-zhankaixuanze-copy"></i>
+                    <span>上滑查看更多</span>
+                </div>
+            </div>
+            <div class="btn-box">
+                <div class="wrap">
+                    <button class="btn prebtn" :class="item.index == 1?'visible':''" @click="clickPreQuestion(item)">上一题</button>
+                    <button v-if="item.index == newQuesOptions.length " class="btn nextbtn" :class="{'next-active':item.btnShow}" :disabled="!item.btnShow" @click="clickNextQuestion(item)">生成报告</button>
+                    <button v-else class="btn nextbtn" :class="{'next-active':item.btnShow}" :disabled="!item.btnShow" @click="clickNextQuestion(item)">下一题</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/jsrsasign-all-min.js"></script>
+    <script src="../js/libs/bodymovin.min.js"></script>
+    <script src="../js/libs/vue.min.js"></script>
+    <script src="../js/libs/polyfill.min.js"></script>
+    <script src="../js/libs/mobiscroll.2.13.2.js"></script>
+    <script src="../config.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/question.js"></script>
+</body>
+
+</html>

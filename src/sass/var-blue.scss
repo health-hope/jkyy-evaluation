@@ -1,0 +1,48 @@
+/*颜色*/
+
+$bg:#f7f7f7; //主背景
+$head-bg:linear-gradient(-38deg, #5C627B 5%, #8591AB 100%); //主标题背景色
+$head-col:#FDFDFD; //白色：内容box背景颜色、主标题字体颜色、按钮字体颜色、按钮背景色、
+$base-col:#606060; //基础颜色：内容、表格内容字体颜色
+$diff-col:#4566ea; //特殊颜色：一般按钮背景、副标题、图标颜色、选中背景色
+$deep-col:#252525; //基础颜色加深：标题颜色、
+$light-col:#929292; //基础颜色变浅：表格表头字体颜色、
+$dis-col:#B9B9B9; //题目回顾未选中字体颜色、题目回顾选项选中背景色、出生日期、身高、体重选择联动未选中字体颜色、输入提示信息颜色、单选框边框颜色
+$birth-col:#4A4A4A; //出生日期选择联动选中字体颜色
+$cue-col:#B2BAC2; //温馨提示颜色、评测回顾按钮背景色、退出回顾按钮背景色
+$refer-col:#818897; //参考资料字体颜色
+$unbtn-col:#E2E2E2; //按钮未选中背景色:下一步按钮未选中颜色
+$count-col:#5171F6; //运动模板数量颜色
+$qs-bg-col:rgba(69, 102, 234, 0.1); //选中背景
+$qs-bg-col-re:rgb(248, 248, 248); //回顾选中
+$btn-bg:rgba(69, 102, 234, 0.1);
+$qs-bg-col-cc:#cccccc; //多选默认背景
+$c-fff:#ffffff;
+$c-EDEDED:#EDEDED;
+//字体大小
+$font-s120:3.0rem; //120px
+$font-s68:1.7rem; //68px
+$font-s64:1.6rem; //64px
+$font-s48:1.2rem; //48px
+$font-s44:1.1rem; //44px
+$font-s42:1.05rem; //42px
+$font-s40:1rem; //40px
+$font-s36:0.9rem; //36px
+$font-s35:.875rem; //35px
+$font-s30:.75rem; //30px
+$font-s32:.8rem; //32px
+$font-s34:0.85rem; //34px
+$font-s32:0.8rem; //32px
+$font-s28:0.7rem; //28px
+$font-s25:.625rem; //25px
+$font-s26:.65rem; //26px
+$font-s24:0.6rem; //24px
+$font-s22:0.55rem; //22px
+$font-s20:.5rem; //20px
+//边框
+$bdr_10:.25rem; //10px
+$bdr_12:.3rem; //12px
+$bdr:0.4rem; //内容边框16px
+$bdr_34:.85rem; //34px
+$bdr_40:1rem; //40px
+$btn-bdr:1.25rem; //按钮边框50px

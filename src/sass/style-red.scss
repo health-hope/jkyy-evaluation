@@ -1,0 +1,2605 @@
+@import './var-red.scss';
+body {
+    background: $bg;
+    max-width: 29.5rem !important;
+    margin: 0 auto;
+}
+
+.index-banner {
+    width: 17.25rem;
+    height: 6.5rem;
+    margin: .75rem auto;
+    border-radius: .4rem;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    background-size: 100% 100%;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: $bdr_12
+    }
+}
+
+// 首页
+.ev-index {
+    .index-banner {
+        .wrapper {
+            padding: 1.75rem 1rem;
+            strong {
+                font-size: $font-s42;
+                color: $head-col;
+                letter-spacing: 0;
+                line-height: $font-s42;
+            }
+            p {
+                margin-top: .25rem;
+                font-size: $font-s24;
+                color: $head-col;
+                line-height: $font-s24;
+            }
+        }
+    }
+    .new {
+        padding-bottom: 3.5rem;
+        background: #ffffff;
+        .img-box {
+            margin: 0;
+            padding: 0;
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+        .btn-box {
+            width: 100%;
+            height: 3.5rem;
+            background: #FFFFFF;
+            box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.05);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                width: 15.95rem;
+                height: 2rem;
+                background: $diff-col;
+                border-radius: 1.1rem;
+                color: #ffffff;
+                font-size: $font-s30;
+            }
+        }
+    }
+    .other {
+        padding-bottom: 3.5rem;
+        background: #ffffff;
+        position: relative;
+        .img-box {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: auto;
+            img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            span {
+                font-size: 1.75rem;
+                color: #5068C3;
+                line-height: 2.5rem;
+                max-width: 11.25rem;
+                position: absolute;
+                top: 2.45rem;
+                left: 1.75rem;
+                font-weight: 600;
+            }
+        }
+        .frontQuote {
+            width: 1.025rem;
+            height: .825rem;
+            position: absolute;
+            top: 16.325rem;
+            left: 1.6rem;
+        }
+        .summary {
+            padding: 0 1.75rem;
+            font-size: $font-s28;
+            color: $base-col;
+            text-align: justify;
+            line-height: 1.1rem;
+        }
+        .content_box {
+            margin-top: 2.5rem;
+            padding: 0 1.75rem;
+            .content_title {
+                font-size: $font-s40;
+                color: #333333;
+                font-weight: bold;
+            }
+            .temOne {
+                font-size: $font-s28;
+                color: $base-col;
+                line-height: 1.05rem;
+                display: inline-block;
+                margin-top: 1rem;
+                span {
+                    display: block;
+                }
+            }
+            .temTwo {
+                padding-left: .175rem;
+                .mart_59 {
+                    margin-top: 1.475rem;
+                }
+                .mart_74 {
+                    margin-top: 1.85rem;
+                }
+                span {
+                    font-size: $font-s24;
+                    color: #333333;
+                }
+                .temTwo_box {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 2.5rem;
+                        height: 2.25rem;
+                    }
+                    div {
+                        &:first-child {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            span {
+                                display: block;
+                                margin-top: .4rem;
+                            }
+                        }
+                        &:last-child {
+                            max-width: 10.75rem;
+                            margin-left: 1.825rem;
+                            font-size: $font-s28;
+                            color: $base-col;
+                            line-height: 1.05rem;
+                        }
+                    }
+                }
+            }
+        }
+        .refer_box {
+            margin-top: 2.5rem;
+            padding: 0 1.75rem;
+            div {
+                font-size: $font-s40;
+                color: #333333;
+                font-weight: bold;
+                margin-bottom: .5rem;
+            }
+            span {
+                font-size: $font-s24;
+                color: $base-col;
+                line-height: .9rem;
+                display: block;
+            }
+        }
+        .footer {
+            width: 10.8rem;
+            height: 2.6rem;
+            margin: 1.5rem auto .75rem auto;
+            display: flex;
+            justify-content: center;
+        }
+        .btn-box {
+            width: 100%;
+            height: 3.5rem;
+            background: #FFFFFF;
+            box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.05);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                width: 15.95rem;
+                height: 2rem;
+                background: $diff-col;
+                border-radius: 1.1rem;
+                color: #ffffff;
+                font-size: $font-s30;
+            }
+        }
+    }
+    .ev-basis {
+        margin: .5rem .75rem;
+        background: $head-col;
+        border-radius: .375rem;
+        padding: 0 1rem 0.75rem 1rem;
+        strong {
+            display: block;
+            padding-top: 1.25rem;
+            font-size: $font-s32;
+            color: $deep-col;
+        }
+        p {
+            margin-top: .5rem;
+            font-size: $font-s28;
+            color: $dis-col;
+            line-height: 1.1rem;
+        }
+        button {
+            display: block;
+            width: 15.25rem;
+            height: 2.5rem;
+            background: $diff-col;
+            border-radius: 1.25rem;
+            margin: .5rem auto 0 auto;
+            color: $head-col;
+            font-size: $font-s32;
+            font-weight: bold;
+            &:active {
+                background: $qs-bg-col;
+            }
+        }
+    }
+    .ev-reference {
+        padding: 0 1.25rem;
+        strong {
+            padding-top: 1.5rem;
+            color: $refer-col;
+            font-size: $font-s28;
+        }
+        ul {
+            padding-top: .25rem;
+            padding-bottom: .925rem;
+            li {
+                display: block;
+                text-align: justify;
+                color: $refer-col;
+                font-size: $font-s24;
+                line-height: .9rem;
+            }
+        }
+    }
+}
+
+//基础数据
+.ev-basicInfo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    // padding-top: .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main {
+        width: 17.15rem;
+        // margin: 0 auto;
+        background: $head-col;
+        border-radius: .375rem;
+        // padding-bottom: 2.725rem;
+        position: fixed;
+        bottom: 4rem;
+        top: .8rem;
+        left: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .items {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &.mg-95 {
+                margin-top: 4.2rem;
+            }
+            &.mg-100 {
+                margin-top: 2.5rem;
+            }
+            &.mg-122 {
+                margin-top: 3.175rem;
+            }
+            &.mg-200 {
+                margin-top: 5rem;
+            }
+            .title {
+                font-size: $font-s32;
+                color: $base-col;
+                line-height: .9rem;
+            }
+            .con {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .name-box {
+                    width: 5rem;
+                    height: 1.2rem;
+                    margin-top: 1.55rem;
+                    input {
+                        width: 100%;
+                        text-align: center;
+                        color: $deep-col;
+                        font-size: $font-s48;
+                        line-height: 1.2rem;
+                        &::-webkit-input-placeholder {
+                            color: $light-col;
+                        }
+                    }
+                }
+                .gender-box {
+                    width: 7.1rem;
+                    margin-top: 1.4rem;
+                    box-sizing: border-box;
+                    display: flex;
+                    .gender {
+                        width: 3.55rem;
+                        display: flex;
+                        align-items: center;
+                        align-content: space-between;
+                        flex-grow: 1;
+                        &:nth-child(2) {
+                            margin-left: 1.85rem;
+                        }
+                        i {
+                            display: block;
+                            font-size: 0.85rem;
+                            color: $light-col;
+                            &.active {
+                                color: $diff-col;
+                            }
+                        }
+                        span {
+                            display: flex;
+                            align-content: flex-end;
+                            margin-left: .5rem;
+                            font-size: $font-s48;
+                            color: $light-col;
+                            &.hight {
+                                color: $deep-col;
+                            }
+                        }
+                    }
+                }
+                .value-box {
+                    margin-top: 1.4rem;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1.85rem;
+                    .user-data {
+                        font-size: $font-s48;
+                        color: $deep-col;
+                        font-weight: bold;
+                    }
+                    i {
+                        color: $diff-col;
+                        font-size: 0.65rem;
+                        margin-left: .25rem; //.5rem;
+                        // margin-top:.18rem;
+                    }
+                    .birthIcon {
+                        margin-top: 0;
+                    } // .heightIcon{
+                    //     color: $diff-col;
+                    //     font-size: 0.65rem;
+                    //     top:.5rem;
+                    //     left: 5rem;
+                    //     position: absolute;
+                    // }
+                    // .weightIcon{
+                    //     color: $diff-col;
+                    //     font-size: 0.65rem;
+                    //     top:.5rem;
+                    //     left: 5rem;
+                    //     position: absolute;
+                    // }
+                }
+            }
+        }
+    }
+    .btn-box {
+        width: 17.15rem;
+        height: 4rem;
+        position: fixed;
+        left: 0.8rem;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        .btn {
+            width: 16.75rem;
+            height: 2.5rem;
+            margin: 0.75rem auto 0 auto;
+            background: $unbtn-col;
+            border-radius: 1.25rem;
+            font-size: $font-s32;
+            color: $dis-col;
+            font-weight: bold;
+            &.isActive {
+                background: $diff-col;
+                color: $head-col;
+            }
+        }
+    }
+}
+//基础数据流式布局
+.ev-basicInfo-flow-pattern{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main {
+        width: 17.15rem;
+        background: $head-col;
+        border-radius: .375rem;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1.25rem;
+        padding-top: 2.375rem;
+        padding-bottom: 4.625rem;
+        .items {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &.mg-95 {
+                margin-top: 2.375rem;
+            }
+            &.mg-100 {
+                margin-top: 2.5rem;
+            }
+            &.mg-122 {
+                margin-top: 3.175rem;
+            }
+            &.mg-200 {
+                margin-top: 5rem;
+            }
+            .title {
+                font-size: $font-s32;
+                color: $base-col;
+                line-height: .9rem;
+            }
+            .con {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .name-box {
+                    width: 5rem;
+                    height: 1.2rem;
+                    margin-top: 1.55rem;
+                    input {
+                        width: 100%;
+                        text-align: center;
+                        color: $deep-col;
+                        font-size: $font-s48;
+                        line-height: 1.2rem;
+                        &::-webkit-input-placeholder {
+                            color: $light-col;
+                        }
+                    }
+                }
+                .gender-box {
+                    width: 7.1rem;
+                    margin-top: 1.4rem;
+                    box-sizing: border-box;
+                    display: flex;
+                    .gender {
+                        width: 3.55rem;
+                        display: flex;
+                        align-items: center;
+                        align-content: space-between;
+                        flex-grow: 1;
+                        &:nth-child(2) {
+                            margin-left: 1.85rem;
+                        }
+                        i {
+                            display: block;
+                            font-size: 0.85rem;
+                            color: $light-col;
+                            &.active {
+                                color: $diff-col;
+                            }
+                        }
+                        span {
+                            display: flex;
+                            align-content: flex-end;
+                            margin-left: .5rem;
+                            font-size: $font-s48;
+                            color: $light-col;
+                            &.hight {
+                                color: $deep-col;
+                            }
+                        }
+                    }
+                }
+                .value-box {
+                    margin-top: 1.4rem;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1.85rem;
+                    .user-data {
+                        font-size: $font-s48;
+                        color: $deep-col;
+                        font-weight: bold;
+                    }
+                    i {
+                        color: $diff-col;
+                        font-size: 0.65rem;
+                        margin-left: .25rem; //.5rem;
+                        // margin-top:.18rem;
+                    }
+                    .birthIcon {
+                        margin-top: 0;
+                    } // .heightIcon{
+                    //     color: $diff-col;
+                    //     font-size: 0.65rem;
+                    //     top:.5rem;
+                    //     left: 5rem;
+                    //     position: absolute;
+                    // }
+                    // .weightIcon{
+                    //     color: $diff-col;
+                    //     font-size: 0.65rem;
+                    //     top:.5rem;
+                    //     left: 5rem;
+                    //     position: absolute;
+                    // }
+                }
+            }
+        }
+    }
+    .btn-box {
+        width: 17.15rem;
+        height: 4rem;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        .btn {
+            width: 16.75rem;
+            height: 2.5rem;
+            margin: 0.75rem auto 0 auto;
+            background: $unbtn-col;
+            border-radius: 1.25rem;
+            font-size: $font-s32;
+            color: $dis-col;
+            font-weight: bold;
+            &.isActive {
+                background: $diff-col;
+                color: $head-col;
+            }
+        }
+    }
+}
+//评测题
+.ev-question {
+    .page {
+        width: 100%;
+        min-height: 100%;
+        box-sizing: border-box;
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        .guide {
+            width: 17.15rem;
+            background: $qs-bg-col;
+            border-radius: .3rem;
+            padding: .85rem .9rem;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            margin-top: 0.8rem;
+            margin-left: -8.525rem;
+            ul {
+                li {
+                    font-size: $font-s28;
+                    color: $diff-col;
+                }
+            }
+        }
+        .guide-review {
+            width: 17.15rem;
+            background: #EDEDED;
+            border-radius: .3rem;
+            padding: .85rem .9rem;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            margin-top: 0.8rem;
+            margin-left: -8.525rem;
+            ul {
+                li {
+                    font-size: $font-s28;
+                    color: $light-col;
+                }
+            }
+        }
+        .progress-box {
+            width: 17.15rem;
+            height: .75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            left: .8rem;
+            .num {
+                height: .75rem;
+                line-height: .75rem;
+                font-size: $font-s28;
+                font-weight: bold;
+            }
+            .question-index {
+                color: $diff-col;
+            }
+            .question-total {
+                color: $qs-bg-col-cc;
+            }
+            .progress {
+                display: flex;
+                width: 14.7rem;
+                height: .25rem;
+                background: $head-col;
+                border-radius: .125rem;
+                position: relative;
+                .bar {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    display: flex;
+                    background: $diff-col;
+                    border-radius: .125rem;
+                }
+            }
+            &.review {
+                .num {
+                    color: $dis-col;
+                }
+                .progress {
+                    .bar {
+                        background: $dis-col;
+                    }
+                }
+            }
+        }
+        .question-main {
+            display: flex;
+            flex-direction: column;
+            width: 17.15rem;
+            margin: .425rem auto;
+            background: $head-col;
+            border-radius: .375rem;
+            padding: 1.3rem .9rem 0 .9rem;
+            position: fixed;
+            left: 50%;
+            left: .8rem;
+            bottom: 4rem;
+            .scroll {
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+            .title {
+                font-size: $font-s44;
+                color: $deep-col;
+                font-weight: bold;
+                text-align: justify;
+                .multi-label {
+                    font-size: $font-s32;
+                    color: $base-col;
+                }
+            }
+            .annotation {
+                margin-top: .5rem;
+                font-size: $font-s24;
+                color: $light-col;
+                background: $bg;
+                border-radius: .2rem;
+                padding: .5rem 1.3rem .475rem .85rem;
+            }
+            .answer {
+                display: flex;
+                margin-top: 1.5rem;
+                .single {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    li {
+                        width: 100%;
+                        padding: .675rem .5rem;
+                        margin-top: 10px;
+                        display: flex;
+                        .qn {
+                            height: 1.1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            span {
+                                font-size: $font-s32;
+                                color: $base-col;
+                            }
+                        }
+                        .option {
+                            margin-left: .25rem;
+                            display: flex;
+                            flex-direction: column;
+                            .op-tit {
+                                font-size: $font-s32;
+                                color: $base-col;
+                                line-height: 1.1rem;
+                            }
+                            .optionRemark {
+                                font-size: $font-s24;
+                                color: $light-col;
+                                margin-top: .4rem;
+                            }
+                        }
+                        &.active {
+                            background: $qs-bg-col;
+                            border-radius: .1rem;
+                            color: $diff-col;
+                            span {
+                                color: $diff-col !important;
+                            }
+                        }
+                    }
+                    &.review {
+                        li {
+                            &.active {
+                                background: $qs-bg-col-re !important;
+                                color: $base-col;
+                                span {
+                                    color: $dis-col !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                .multi {
+                    margin-bottom: 1rem;
+                    li {
+                        width: 100%;
+                        display: block;
+                        float: left;
+                        align-items: flex-start;
+                        padding: .75rem .5rem;
+                        margin-top: .125rem;
+                        line-height: 1.125rem;
+                        &:nth-child(1) {
+                            margin-top: 0;
+                        }
+                        .multi-item {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-content: center;
+                            .option {
+                                display: flex;
+                                align-items: flex-start; // height: 100%;
+                                span {
+                                    &:nth-child(1) {}
+                                    &:nth-child(2) {
+                                        margin-left: .025rem;
+                                        height: 100%;
+                                        align-self: flex-start;
+                                    }
+                                }
+                            }
+                            span {
+                                font-size: $font-s32;
+                                color: $base-col;
+                            }
+                            i {
+                                color: $qs-bg-col-cc;
+                                font-size: $font-s32;
+                            }
+                        }
+                        &.active {
+                            background: $qs-bg-col;
+                            border-radius: .1rem;
+                            color: $diff-col;
+                            i {
+                                color: $diff-col;
+                                font-size: $font-s32;
+                            }
+                            span {
+                                color: $diff-col;
+                            }
+                        }
+                    }
+                    &.review {
+                        li {
+                            .multi-item {
+                                span {
+                                    color: $dis-col !important;
+                                }
+                                i {
+                                    color: $dis-col !important;
+                                }
+                            }
+                            &.active {
+                                background: $qs-bg-col-re !important;
+                                span {
+                                    color: $base-col !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .time_box {
+                margin-top: 1rem;
+                border-top: 1px solid #EDEDED;
+                // .time {}
+            }
+            /*时间控件初始化*/
+            .time_box {
+                .dw-inline {
+                    .dw {
+                        display: block;
+                        .dwwr {
+                            background: #fdfdfd;
+                            border-radius: 0;
+                            .dwhl {
+                                padding: 0;
+                            }
+                            .dwc {
+                                padding: 0;
+                                display: block;
+                                .dwwc {
+                                    .dww {
+                                        .dw-li {
+                                            font-size: .8rem;
+                                            color: $light-col;
+                                            padding: 0;
+                                        }
+                                        .blue {
+                                            color: $diff-col;
+                                            font-size: .9rem;
+                                        }
+                                    }
+                                }
+                            }
+                            .dwww {
+                                padding: 0;
+                                .dwwo {
+                                    background-image: linear-gradient(#fdfdfd, rgba(245, 245, 245, 0) 50%, rgba(245, 245, 245, 0) 50%, #fdfdfd)
+                                }
+                            }
+                            .dwwol {
+                                width: 100% !important;
+                                left: 0 !important;
+                                border: none !important;
+                                background: #F7F7F7;
+                            }
+                        }
+                    }
+                }
+            }
+            .more-remind {
+                background: rgba(255, 255, 255, 0.5);
+                height: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i {
+                    transform: rotate(-180deg);
+                    color: #666666;
+                    font-size: 10px;
+                }
+                span {
+                    font-size: 0.65rem;
+                    color: #666666;
+                }
+            }
+        }
+        .btn-box {
+            width: 100%;
+            height: 4rem;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            .wrap {
+                width: 16.75rem;
+                height: 100%;
+                margin: .5rem auto 0 auto;
+                display: flex;
+                justify-content: space-between;
+                .btn {
+                    display: block;
+                    width: 5.05rem;
+                    height: 2.5rem;
+                    font-size: $font-s32;
+                    border-radius: 1.2rem;
+                    &.prebtn {
+                        background: $c-fff;
+                        box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.05);
+                        color: $base-col;
+                    }
+                    &.nextbtn {
+                        background: $c-EDEDED;
+                        box-shadow: 0 -2px 4px 0 rgba(236, 236, 236, 0.50);
+                        color: $qs-bg-col-cc;
+                    }
+                    &.next-active {
+                        background: $diff-col;
+                        box-shadow: 0 -2px 4px 0 rgba(236, 236, 236, 0.50);
+                        color: $head-col;
+                    }
+                    &.visible {
+                        visibility: hidden;
+                    }
+                }
+                .logout-review {
+                    display: block;
+                    margin-top: 0.6rem;
+                    width: 3.75rem;
+                    height: 1.3rem;
+                    background: $cue-col;
+                    box-shadow: 0 -2px 4px 0 rgba(236, 236, 236, 0.50);
+                    border-radius: 1.25rem;
+                    font-size: $font-s22;
+                    color: $head-col;
+                }
+            }
+        }
+    }
+    .show {
+        display: flex !important;
+    }
+    .hide {
+        display: none;
+    }
+}
+
+//评测管理图标
+.manage-icon {
+    display: inline-block;
+    color: $diff-col;
+    font-size: $font-s40;
+}
+
+.gengduo {
+    display: inline-block;
+    color: #ccc;
+    position: absolute;
+    right: 1.75rem;
+    font-size: $font-s25;
+}
+
+//按钮
+.manage-btn {
+    height: 2.5rem;
+    background: $diff-col;
+    border-radius: $btn-bdr;
+    padding: .7rem 6.025rem .675rem 6.025rem;
+    font-size: $font-s32; //32px
+    color: $head-col;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.pageBox {
+    padding: .8rem .6rem .8rem .8rem;
+}
+
+//标题box
+.headBox {
+    background: $head-bg;
+    border-radius: $bdr;
+    height: 6.5rem;
+    color: $head-col;
+}
+
+//序号
+.number {
+    display: inline-block;
+    background-image: url(../images/managementPlan/circle.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1rem;
+    height: 1rem;
+    font-size: $font-s28;
+    color: $head-col;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    // float: left;
+}
+
+.marb_36 {
+    margin-bottom: .9rem;
+}
+
+.marb_60 {
+    margin-bottom: 1.5rem; //60px
+}
+
+.marb_40 {
+    margin-bottom: 1rem; //40px
+}
+
+.marb_32 {
+    margin-bottom: .8rem; //32px
+}
+
+.mart_16 {
+    margin-top: .4rem;
+}
+
+.mart_20 {
+    margin-top: .5rem;
+}
+
+.mart_30 {
+    margin-top: .75rem;
+}
+
+.mart_32 {
+    margin-top: .8rem;
+}
+
+.mart_40 {
+    margin-top: 1rem;
+}
+
+.padt_40 {
+    padding-top: 1rem;
+}
+
+.padt_20 {
+    padding-top: .5rem;
+}
+
+.mart_44 {
+    margin-top: 1.1rem;
+}
+
+.mart_50 {
+    margin-top: 1.25rem;
+}
+
+.mart_60 {
+    margin-top: 1.5rem;
+}
+
+.mart_56 {
+    margin-top: 1.4rem;
+}
+
+.marl_16 {
+    margin-left: .4rem;
+}
+
+.marr_14 {
+    margin-right: .35rem;
+}
+
+.marr_30 {
+    margin-right: .45rem;
+}
+
+.padt_20 {
+    padding-top: .5rem;
+}
+
+.conmar {
+    margin: .8rem .6rem 0 .6rem;
+}
+
+//评测管理
+#evaluationManage {
+    .manageFooter {
+        width: 100%;
+        height: 2.5rem;
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-s32;
+        padding: 0 .6rem;
+    }
+    .newManage-btn {
+        padding: .275rem 1.7rem;
+        background: $head-col;
+        height: 1.7rem;
+        width: 5rem;
+        background: $bg;
+        border-radius: $bdr_34;
+        margin-top: .4rem;
+        color: $light-col;
+        font-weight: bold;
+    }
+    .pageBox {
+        margin: .5rem 1rem 0 1rem;
+    }
+    .manageHeadBox {
+        height: 6.5rem;
+        border-radius: $bdr;
+        margin-bottom: .5rem;
+    }
+    .manageContentBox {
+        padding: 1.975rem .8175rem 2.025rem 1.05rem;
+        margin-bottom: 1.25rem;
+        margin: 0 .6rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+    }
+    .manageContentBox-firstli {
+        margin-bottom: 2.6rem;
+    }
+    .manageContentBox ul li {
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -o-flex;
+        align-items: center;
+    }
+    .reportText {
+        display: inline-block;
+        margin-left: .55rem;
+        font-size: $font-s32;
+        font-weight: bold;
+        color: $deep-col;
+    }
+    .cue {
+        margin-top: .6rem;
+        font-size: $font-s22;
+        color: $cue-col;
+        letter-spacing: 0;
+        text-align: center;
+        margin-left: .6rem;
+        margin-right: .6rem;
+    }
+}
+
+.report-btn {
+    margin-top: .75rem;
+    height: 2.5rem; // width: 100%;
+    border-radius: $btn-bdr;
+    font-size: $font-s32; //32px
+    color: $diff-col;
+    text-align: center;
+    background-color: $btn-bg;
+}
+
+//评估报告
+#evaluationReport,
+#physicalExam {
+    ul {
+        list-style: none;
+    }
+    .btnFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .newBtn {
+        height: 2.5rem;
+        width: 7.875rem;
+        border-radius: $btn-bdr;
+        font-size: $font-s32;
+        color: $diff-col;
+        text-align: center;
+        line-height: 2.5rem;
+        background-color: $btn-bg;
+    }
+    .marr_40 {
+        margin-right: 1rem;
+    }
+    .marb_50 {
+        margin-bottom: 1.25rem;
+    }
+    .btn_plan {
+        height: 2.5rem;
+        width: 7.875rem;
+        border-radius: $btn-bdr;
+        font-size: $font-s32; //32px
+        color: $head-col;
+        text-align: center;
+        line-height: 2.5rem;
+        background-color: $diff-col;
+    }
+    .reportRisk {
+        height: 8.4rem;
+        width: 17.25rem;
+    }
+    .marb {
+        margin-bottom: 1rem;
+    }
+    .reportBox {
+        text-align: center;
+        margin-bottom: .75rem;
+    }
+    .report {
+        padding-top: 1.25rem;
+        font-size: $font-s28;
+        color: $head-col;
+        letter-spacing: 0;
+        line-height: $font-s28;
+        margin-bottom: .5rem;
+    }
+    .reportScore {
+        font-size: $font-s120;
+        color: $head-col;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: $font-s120;
+    }
+    .reportContentBox {
+        width: 17.25rem;
+        padding: 0 .8rem 1.4rem .8rem;
+        margin-top: .8rem;
+    }
+    .xz_icon {
+        display: inline-block;
+        transform: rotate(90deg);
+        font-size: .3rem;
+    } //内容标题
+    .reportContentTitle {
+        font-size: $font-s32;
+        color: $deep-col;
+        padding-top: 1.4rem;
+        font-weight: bold;
+        margin-bottom: .8rem;
+    } //内容1
+    .reportContent {
+        font-size: $font-s28;
+        color: $base-col;
+        letter-spacing: 0;
+    } //模板2中的说明样式
+    .reportContent2 {
+        font-size: $font-s28;
+        color: $base-col;
+        letter-spacing: 0;
+        margin-bottom: .5rem;
+    }
+    //表格模板
+    .reportTable table {
+        margin-top: .5rem;
+        width: 100%;
+        word-wrap: break-word;
+        word-break: break-all;
+        border-collapse: collapse;
+    }
+    .reportTable tr,
+    td {
+        border-bottom: 1px solid $c-EDEDED;
+        color: $base-col;
+    }
+    .reportTable td,
+    th {
+        padding: .6rem .525rem .6rem 0;
+        font-size: $font-s28;
+    }
+    .reportTable th {
+        color: $light-col;
+        font-weight: lighter;
+        // text-align: left;
+    }
+    .reportTable tr:last-child {
+        border-bottom: none;
+        td {
+            border-bottom: none;
+        }
+    }
+    .reportTable td:first-child {
+        white-space: nowrap;
+    }
+    .remark {
+        font-size: $font-s24;
+        color: $light-col;
+        padding: .75rem .5rem 0 .5rem;
+    }
+}
+
+//检查建议
+.inspectSuggestion {
+    .suggestBox {
+        padding: 0 .75rem;
+    }
+    .suggestContentTitle {
+        font-size: $font-s32;
+        color: $diff-col;
+        letter-spacing: 0;
+        padding: 1.25rem 0 .5rem 0;
+    }
+    .suggestContent {
+        font-size: $font-s28;
+        color: $base-col;
+        letter-spacing: 0;
+    }
+}
+
+.planBg {
+    background: $head-col !important;
+}
+
+//心理报告
+#psychologicalReport,
+#nutritionalState {
+    padding: .8rem;
+    .psySec {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        border-radius: .3rem;
+    }
+    .psyresult {
+        font-size: $font-s24;
+        color: $diff-col;
+        padding-top: 3.275rem;
+        margin-left: 2rem;
+    }
+    .result {
+        font-size: $font-s68;
+        color: $diff-col;
+        margin-top: 1.1rem;
+        margin-left: 2rem;
+        font-weight: bold;
+        line-height: 1.8rem;
+    }
+    .hr {
+        width: 1.2rem;
+        height: .1rem;
+        margin-top: 1.7rem;
+        margin-left: 2rem;
+        background: $diff-col;
+    }
+    .psyCon {
+        margin-top: 2.525rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-size: $font-s28;
+        color: $diff-col;
+        line-height: 1.05rem;
+        padding-bottom: 4rem;
+    }
+    .psymar {
+        margin: .75rem .8rem 0 .8rem;
+    }
+    .btnFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .newBtn {
+        height: 2.4rem;
+        width: 8.175rem;
+        border-radius: $btn-bdr;
+        font-size: $font-s32;
+        color: $diff-col;
+        text-align: center;
+        line-height: 2.5rem;
+        background-color: $btn-bg;
+    }
+    .marr_40 {
+        margin-right: 1rem;
+    }
+    .marb_50 {
+        margin-bottom: 1.25rem;
+    }
+    .btn_plan {
+        height: 2.4rem;
+        width: 8.175rem;
+        border-radius: $btn-bdr;
+        font-size: $font-s32; //32px
+        color: $head-col;
+        text-align: center;
+        line-height: 2.5rem;
+        background-color: $diff-col;
+    }
+}
+
+//管理方案
+#managementPlan {
+    height: 100%;
+    position: relative;
+    .managementHead {
+        background-image: url(../images/managementPlan/head_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 100% 100%;
+        position: relative;
+        height: 14.9375rem;
+    } //风险等级
+    .riskLevel {
+        width: 5.15rem;
+        height: 3.275rem;
+        position: absolute;
+        left: 2.125rem;
+        top: 1.98rem;
+    } //主题图片
+    .evalThemeImage {
+        width: 6.425rem;
+        height: 9.9rem;
+        position: absolute;
+        left: 10.35rem;
+        top: .68rem;
+    } //用户信息
+    .userInfo {
+        position: absolute;
+        display: inline-block;
+        top: 7.4rem;
+        left: 1.5rem;
+        color: #fff;
+    } //用户姓名
+    .userName {
+        display: inline-block;
+        font-size: $font-s36;
+        letter-spacing: 0;
+        font-weight: bold;
+    } //用户性别
+    .userSex {
+        font-size: $font-s28;
+        letter-spacing: 0;
+    }
+    //健康管理建议
+    .healthAdvice_box {
+        // margin-top: .8225rem;
+        position: relative;
+        padding: .8rem 1rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+        //前引号
+        .frontQuote {
+            width: 1rem;
+            height: .725rem;
+            display: block;
+            padding-bottom: .4rem;
+        }
+        .healthAdvice {
+            font-size: $font-s28;
+            color: $base-col;
+            line-height: 1.15rem;
+            span {
+                display: block;
+                margin: 0 .375rem;
+            }
+        }
+        //后引号
+        .backQuote {
+            display: block;
+            width: .9rem;
+            height: .725rem;
+            padding-top: .45rem;
+            position: absolute;
+            right: 1rem;
+        }
+    }
+    .managePlanContent {
+        // margin: 0 .6rem 2.1rem .6rem;
+        margin-left: .6rem;
+        margin-right: .6rem;
+        // margin-bottom: 1rem;
+        // padding-bottom: 1rem;
+    }
+    #tabBox[data-fixed="fixed"] {
+        position: fixed;
+        left: 0;
+        top: -.1rem;
+        margin: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    .sticky {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: -0.2rem !important;
+        z-index: 100;
+    }
+    .managePalnContentMart_5 {
+        position: relative;
+        top: 4.5rem;
+    }
+    .managePalnContentMart_2 {
+        position: relative;
+        top: .75rem;
+    } //页签tab
+    .planName {
+        // padding: .725rem 0 .65rem 1rem;
+        background-image: url(../images/managementPlan/rectangle_grey.png); // background-image: url(../images/managementPlan/Rectangle.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, 0.04);
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: scroll;
+        // background: yellow;
+        padding-left: 1rem;
+    }
+    .planNameShawo {
+        box-shadow: 0 0 .2rem 0 rgba(0, 0, 0, 0.08);
+    }
+    .planName ul {
+        display: flex;
+        height: 100%;
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: $font-s32;
+            color: $light-col;
+            letter-spacing: 0;
+            padding-right: 2rem;
+            position: relative;
+            height: 2.1rem;
+            justify-content: center;
+            &:last-child {
+                padding-right: 1rem;
+            }
+            i {
+                // margin-top: .5rem;
+                display: block;
+                width: .8rem;
+                height: .1rem;
+                background: $diff-col;
+                border-radius: 1rem;
+                position: absolute;
+                bottom: .1rem;
+            }
+            &.active {
+                display: flex;
+                justify-content: center;
+                span {
+                    color: $diff-col !important;
+                }
+            }
+        }
+    }
+    //内容模板2
+    //表格
+    .planTable table {
+        width: 100%;
+        font-size: $font-s26;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .planTable table,
+    th,
+    tr,
+    td {
+        border: 1px solid $unbtn-col;
+        border-collapse: collapse;
+    }
+    .planTable tr>td {
+        color: $base-col;
+        letter-spacing: 0;
+        padding: .75rem .5rem;
+    }
+    .planTable tr>td:first-child {
+        color: $count-col;
+    }
+    //饮食数据模板1
+    // .dietTemplateOne {
+    //     margin-top: .75rem;
+    //     background: $head-col;
+    //     box-shadow: 0 .05rem .75rem 0 rgba(0, 0, 0, 0.08);
+    //     border-radius: $bdr;
+    //     height: 100%;
+    //     padding: 1rem;
+    //     display: flex;
+    //     display: -webkit-flex;
+    //     display: -ms-flex;
+    //     display: -moz-flex;
+    //     display: -o-flex;
+    // .subClassifyData {
+    //     margin-top: .5rem;
+    //     margin-left: 6.25rem;
+    // }
+    // .submarb {
+    //     margin-bottom: .5rem;
+    // }
+    // .subClassify {
+    //     font-size: $font-s24;
+    //     color: $dis-col;
+    //     letter-spacing: 0;
+    //     line-height: 1.15rem;
+    // }
+    // }
+    //健康管理干预内容
+    .interventionContent {
+        padding: 3rem 1rem 1.4rem 1rem;
+    }
+    .interventTitle {
+        font-size: $font-s36;
+        color: $deep-col;
+        font-weight: bold;
+    }
+    .vam {
+        line-height: 1rem;
+        vertical-align: middle;
+        clear: both;
+    }
+    .interSubTitle {
+        font-size: $font-s28;
+        color: $base-col;
+        line-height: 1.15rem;
+        margin-left: 1.5rem;
+        // float: left;
+    }
+}
+
+//所有模板样式
+.template {
+    //内容box
+    .contentBox {
+        background: $head-col;
+        border-radius: $bdr;
+    }
+    // 标题
+    .temTitle {
+        font-size: $font-s32;
+        color: #333;
+        font-weight: bold;
+        padding-top: 1rem;
+    }
+    //内容模板1
+    .templateOne {
+        margin-top: .8rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        padding-bottom: 1rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        ul>li {
+            vertical-align: middle;
+            height: 100%;
+            position: relative;
+            margin-bottom: .5rem;
+        }
+        ul>li:last-child {
+            margin-bottom: 0;
+        }
+        //序号
+        .number {
+            display: inline-block;
+            background-image: url(../images/managementPlan/circle.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                text-align: center;
+                vertical-align: middle;
+                font-size: $font-s28;
+                color: $head-col;
+            }
+        }
+        // 内容模板1内容
+        .temConLi {
+            display: block;
+            height: 100%;
+            font-size: $font-s28;
+            color: $base-col;
+            letter-spacing: 0;
+            line-height: 1.15rem;
+            margin-left: 1.25rem;
+        }
+    }
+    //内容模板2
+    .templateTwo {
+        margin-top: .8rem;
+        margin-top: .8rem;
+        padding: 0 .8rem 1.375rem .8rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+    }
+    //说明
+    .explain {
+        font-size: $font-s24;
+        color: $light-col;
+        // margin-bottom: .75rem;
+        margin-top: .4rem;
+    }
+    //新内容模板3
+    .newTemplateThree {
+        margin-top: 1.1rem;
+        span {
+            display: block;
+            font-size: $font-s28;
+            color: $base-col;
+            letter-spacing: 0;
+            line-height: 1.1rem;
+            margin-bottom: .4rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    //内容模板4
+    .templateFour {
+        margin-top: .8rem;
+        padding: 0 .8rem 1.375rem .8rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        .subDetail {
+            font-size: $font-s24;
+            color: $light-col;
+            margin-top: .4rem;
+        }
+        .subtitle {
+            font-size: $font-s28;
+            color: $light-col;
+        }
+        .subSubTitle {
+            font-size: $font-s28;
+            color: $deep-col;
+            display: block;
+            line-height: 1rem;
+        }
+        .vam {
+            line-height: 1rem;
+            vertical-align: middle;
+        }
+    }
+    //内容模板6
+    .templateSix {
+        margin-top: 1.4rem;
+        .title {
+            font-size: .9rem;
+            color: $deep-col;
+            line-height: 1.25rem;
+            font-weight: bold;
+        }
+        .flexbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .classify {
+            font-size: $font-s24;
+            color: $deep-col;
+            display: block;
+            text-align: center;
+            margin-top: .4rem;
+            width: 3rem;
+        }
+        .marl_76 {
+            margin-left: 1.9rem;
+        }
+    }
+    //空白模板
+    .whiteContent {
+        text-align: center;
+        .goodImg {
+            width: 3.75rem;
+            height: 3.7225rem;
+            margin-top: 4.015rem;
+        }
+        .whiteText {
+            margin-top: 1.515rem;
+            font-size: $font-s28;
+            color: $light-col;
+        }
+    }
+    //风险因素模板
+    .riskFactorTem {
+        margin-top: .8rem;
+        padding: 0 .8rem 1.4rem .8rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        ul>li {
+            margin-top: .8rem;
+            .riskFactorTitleLevel {
+                height: 100%;
+                line-height: 100%;
+                vertical-align: middle;
+                display: flex;
+                align-items: flex-start;
+            }
+            .flex_box {
+                display: flex;
+                align-items: flex-start;
+                height: 100%;
+            }
+            .riskFactor {
+                margin-left: 1.25rem;
+                font-size: $font-s28;
+                color: $deep-col;
+                width: 7.125rem;
+                display: inline-block;
+            }
+            .riskLevelCon {
+                display: inline-block;
+                font-size: $font-s24;
+                color: $light-col;
+                display: flex;
+                align-items: center;
+                margin-left: 1.1rem;
+            }
+            .riskImg {
+                width: .425rem;
+                height: .75rem;
+                margin-left: .1rem;
+            }
+            .riskFactorRangeResult {
+                display: flex;
+                line-height: .825rem;
+                margin-top: .3rem;
+            }
+            .referRange {
+                margin-left: 1.25rem;
+                font-size: $font-s24;
+                color: $light-col;
+                width: 7.125rem;
+            }
+        }
+    }
+    //健康指数模板
+    .healthIndexTem {
+        margin-top: .8rem;
+        padding: 0 .8rem 1.4rem .8rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        .subDetail {
+            font-size: $font-s24;
+            color: $light-col;
+            margin-top: .4rem;
+        }
+        .glsSubTitle {
+            font-size: $font-s28;
+            color: $deep-col;
+        }
+        .scrollContent {
+            width: 100%;
+            overflow: scroll;
+        }
+        .sub {
+            font-size: $font-s24;
+            color: $dis-col;
+            float: left;
+            margin-right: .075rem;
+        }
+        .clear {
+            clear: left;
+        }
+        .subblock {
+            display: inline-block;
+            text-align: center;
+            width: inherit;
+        }
+        .glsImg {
+            display: inline-block;
+            height: .3rem;
+            width: inherit;
+        }
+        .border_left {
+            border-radius: 2.5rem .15rem .15rem 2.5rem;
+        }
+        .border_right {
+            border-radius: .15rem 2.5rem 2.5rem .15rem;
+        }
+        .glsNum {
+            font-size: $font-s24;
+            color: #666;
+            text-align: right;
+            display: inline-block;
+            margin-left: .5rem;
+            margin-top: .25rem;
+            width: inherit;
+        }
+        .seeMore {
+            font-size: $font-s20;
+            color: $cue-col;
+            height: .75rem;
+            width: 100%;
+            text-align: right;
+            display: inline-block;
+        }
+    }
+    .templateThree {
+        margin-top: .775rem;
+        ul>li {
+            // vertical-align: middle;
+            height: 100%;
+            position: relative;
+            margin-bottom: .5rem;
+            display: flex;
+            img {
+                width: .4rem;
+                height: .4rem;
+                opacity: 0.5;
+                display: block;
+                // line-height: 1rem;
+                margin-top: .3rem;
+            }
+        }
+        ul>li:last-child {
+            margin-bottom: 0;
+        }
+        .blueCircle {
+            display: inline-block;
+            background-image: url(../images/managementPlan/bluecircle.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: .4rem;
+            height: .4rem;
+            position: absolute;
+            top: .3rem;
+        }
+        .temThreeTitle {
+            display: block;
+            font-size: $font-s28;
+            color: $light-col;
+            margin-left: .65rem;
+            line-height: 1rem;
+        }
+    }
+    //膳食结构模板
+    .dietStructureTem {
+        margin-top: .8rem;
+        padding: 1.4rem .8rem 1.4rem .8rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        ul>li {
+            margin-top: 1.5rem;
+        }
+        .flex_box {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            justify-content: space-between;
+        }
+        .num {
+            display: flex;
+            width: 1rem;
+            height: 1rem;
+            background: url(../images/managementPlan/circle.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            justify-content: center;
+            align-items: center;
+            font-size: $font-s28;
+            color: $c-fff;
+        }
+        .classify {
+            font-size: $font-s28;
+            color: #333333;
+            width: 7.125rem;
+            display: inline-block;
+            margin-left: .6rem;
+            text-align: left;
+            margin-top: 0;
+        }
+        img {
+            width: 1.5rem;
+            height: .8rem;
+            display: inline-block;
+        }
+        .result {
+            display: inline-block;
+            margin-left: 1.925rem;
+            font-size: $font-s24;
+            color: $light-col;
+        }
+        .range {
+            margin-top: .3rem;
+            font-size: $font-s24;
+            color: $light-col;
+            margin-left: 1.6rem;
+        }
+    }
+    //方案模板的公共样式
+    .marr {
+        margin-right: .75rem;
+    }
+    //数量
+    .count {
+        font-size: $font-s42;
+        color: $deep-col;
+        letter-spacing: 0;
+        line-height: 1.15rem;
+    }
+    //单位
+    .unit {
+        font-size: $font-s20;
+        color: $deep-col;
+        letter-spacing: 0;
+        line-height: 1.15rem;
+        margin-left: .15rem;
+    }
+    .bigImage {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .classify {
+        font-size: $font-s24;
+        color: $deep-col;
+        display: block;
+        text-align: center;
+        margin-top: .25rem;
+        width: inherit;
+    }
+    //饮食模板2
+    .dietTemplateTwo {
+        margin-top: .75rem;
+        width: 8rem;
+        height: 7.05rem;
+        background: $head-col;
+        box-shadow: 0 .05rem .75rem 0 rgba(0, 0, 0, 0.08);
+        border-radius: $bdr;
+        padding: 1rem;
+        position: relative;
+        display: inline-block;
+        div {
+            display: flex;
+            align-items: center;
+        }
+        .smallImage {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .dietClassify {
+            font-size: $font-s24;
+            color: $deep-col;
+            letter-spacing: 0;
+            display: inline-block;
+            margin-left: .3rem;
+        }
+        .countPos {
+            position: absolute;
+            bottom: 1.1rem;
+            right: 1rem;
+        }
+    }
+    //运动模板
+    .sportTemplate {
+        margin-top: .8rem;
+        background: $head-col;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        border-radius: $bdr_12;
+        height: 100%;
+        padding: 1rem 1.4rem 1rem .8rem;
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -o-flex;
+        align-items: center;
+        .sportInfo {
+            margin-left: 2.25rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .sportVal {
+            font-size: $font-s24;
+            color: $light-col;
+            letter-spacing: 0;
+        }
+        .sportImg {
+            width: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: flex-start;
+        }
+        .mart {
+            margin-top: .5rem;
+        }
+        .sportMart {
+            margin-bottom: .2rem;
+        }
+        .sportCount {
+            font-size: $font-s42;
+            color: $diff-col;
+            letter-spacing: 0;
+            line-height: 1.15rem;
+        }
+        .sportUnit {
+            font-size: $font-s20;
+            color: $count-col;
+            letter-spacing: 0;
+            line-height: 1.15rem;
+        }
+    }
+    //生活方式模板
+    .lifeTemplate {
+        margin-top: .75rem;
+        background: $head-col;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        border-radius: $bdr;
+        height: 100%;
+        padding: 1rem 1.4rem;
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -o-flex;
+        align-items: center;
+        .lifeInfo {
+            margin-left: 2.25rem;
+        }
+        .lifeMarb {
+            margin-bottom: .25rem;
+        }
+        .lifeVal {
+            font-size: $font-s24;
+            color: $light-col;
+        }
+        .sportCount {
+            font-size: $font-s42;
+            color: $diff-col;
+            letter-spacing: 0;
+            line-height: 1.15rem;
+        }
+        .sportUnit {
+            font-size: $font-s20;
+            color: $count-col;
+            letter-spacing: 0;
+            line-height: 1.15rem;
+        }
+    }
+    //膳食模板
+    .foodRecommend {
+        .foodRecommend_title {
+            font-size: $font-s36;
+            color: $deep-col;
+            font-weight: bold;
+            margin-bottom: .4rem;
+        }
+        .foodRecommend_explain {
+            font-size: $font-s24;
+            color: $light-col;
+        }
+        .foodRecommend_content {
+            background: $head-col;
+            box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+            border-radius: $bdr;
+            height: 100%;
+            padding: 1.2rem .8rem 1.4rem .8rem;
+            margin-top: .8rem;
+        }
+        .foodRecommend_content ul>li {
+            margin-bottom: .8rem;
+        }
+        .foodRecommend_content ul>li:last-child {
+            margin-bottom: 0rem;
+        }
+        .foodRecommend_flex {
+            display: flex;
+            justify-content: space-between;
+        }
+        .smallImage {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .foodRecommendClassFlex {
+            display: flex;
+            align-items: center;
+        }
+        .foodRecommend_classify {
+            font-size: $font-s28;
+            color: $deep-col;
+            display: inline-block;
+            margin-left: .3rem;
+        }
+        .foodRecommend_count {
+            font-size: $font-s28;
+            color: $deep-col;
+            line-height: 1.15rem;
+            margin-right: .1rem;
+        }
+        .foodRecommend_detail {
+            display: inline-block;
+            width: .6rem;
+            height: .6rem;
+            line-height: 1.5rem;
+            vertical-align: middle;
+            margin-left: .25rem;
+        }
+        .classifyDetialCon {
+            background: $bg;
+            border-radius: $bdr_10;
+            width: 100%;
+            margin: .5rem 0;
+            vertical-align: middle;
+        }
+        .classifyDetial {
+            display: inline-block;
+            padding: .5rem 1rem .5rem .85rem;
+            font-size: $font-s24;
+            color: $light-col;
+        }
+    }
+    //图片模板
+    .iconxs {
+        display: inline-block;
+        margin-left: .4rem;
+        font-size: .55rem;
+    }
+    .icon_xs {
+        transform: rotate(180deg);
+    }
+    .imageListTemplate {
+        .foodRefer {
+            font-size: $font-s28;
+            color: $diff-col;
+            margin-top: 1.1rem;
+        }
+        .foodReferImg {
+            width: 8.45rem;
+            height: 5.8rem;
+        }
+    }
+    //标签模板
+    .labelTemplate {
+        padding: 1.4rem .8rem .775rem .8rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        .cookWay {
+            font-size: $font-s32;
+            color: #333;
+            margin-bottom: .9rem;
+            font-weight: bold;
+        }
+        .cookwayList ul>li {
+            display: inline-block;
+        }
+        .way {
+            display: inline-block;
+            background: rgba(69, 102, 234, 0.2);
+            border: .025rem solid $unbtn-col;
+            border-radius: 1rem;
+            text-align: center;
+            padding: .2rem .7rem .2rem .7rem;
+            font-size: $font-s28;
+            color: $diff-col;
+            margin-right: .8rem;
+            margin-bottom: .6rem;
+        }
+        .cookWayFlex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    //中医体质模板
+    .zyTypeTem {
+        background-repeat: no-repeat !important;
+        background-size: 100% !important;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        border-radius: .4rem;
+        width: 100%;
+        // height: 8rem;
+        height: 7.9rem;
+        // margin-top: .8rem;
+        span {
+            display: block;
+            margin-left: .9rem;
+            color: #ffffff;
+            &:nth-child(1) {
+                padding-top: 1.4rem;
+                font-size: $font-s28;
+            }
+            &:nth-child(2) {
+                font-size: $font-s48;
+                margin-top: .4rem;
+                line-height: 1.675rem;
+            }
+            &:nth-child(3) {
+                font-size: $font-s28;
+                max-width: 15rem;
+                line-height: 1rem;
+            }
+        }
+    }
+    //眼保健操：内容模板7
+    .templateSeven {
+        padding: 1.2rem .8rem;
+        margin-top: .75rem;
+        .temTitle {
+            font-size: .7rem;
+            color: $base-col;
+            margin-bottom: .1rem;
+        }
+        .tem {
+            margin-top: .8rem;
+            span {
+                font-size: .7rem;
+                color: $base-col;
+            }
+            img {
+                width: 100%;
+                height: 10rem;
+                background: #D8D8D8;
+                border-radius: .2rem;
+                margin-top: .4rem;
+                display: block;
+            }
+        }
+    }
+    //营养状态模板
+    .nutritiousTem {
+        padding: 0 .8rem 1.4rem .8rem;
+        min-height: 28.5rem;
+        .temTitle {
+            font-size: .8rem;
+            color: $deep-col;
+        }
+        .nutritious {
+            margin-top: 1.1rem;
+            .nutritiousInfo {
+                display: flex;
+                justify-content: space-between;
+                span {
+                    display: block;
+                    font-size: .7rem;
+                    color: $light-col;
+                }
+            }
+            .subContent {
+                font-size: .7rem;
+                color: $deep-col;
+                margin-top: .4rem;
+            }
+        }
+    }
+    // 内容模板10
+    .exercisesTem {
+        padding: 1.2rem .8rem;
+        margin-top: .75rem;
+        .explainInfo {
+            font-size: .7rem;
+            color: $base-col;
+            line-height: 1.1rem;
+            padding-bottom: .4rem;
+        }
+        .exercises {
+            li {
+                display: block;
+                margin-top: .4rem;
+                span {
+                    line-height: 1.1rem;
+                    display: block;
+                    &:first-child {
+                        font-size: .8rem;
+                        color: $deep-col;
+                        font-weight: bold;
+                    }
+                    &:last-child {
+                        margin-top: .4rem;
+                        font-size: .7rem;
+                        color: $base-col;
+                    }
+                }
+            }
+        }
+    }
+    .templateEight {
+        margin-top: .8rem;
+        padding: 1.2rem .8rem 1.2rem .8rem;
+        box-shadow: 0 .1rem .8rem 0 rgba(0, 0, 0, 0.05);
+        ul>li {
+            vertical-align: middle;
+            height: 100%;
+            position: relative;
+            margin-bottom: .5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        ul>li:last-child {
+            margin-bottom: 0;
+        }
+        //序号
+        .number {
+            display: inline-block;
+            background-image: url(../images/managementPlan/circle.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.1rem;
+            span {
+                text-align: center;
+                vertical-align: middle;
+                font-size: $font-s28;
+                color: $head-col;
+            }
+        }
+        .marl_64 {
+            margin-left: 1.6rem;
+        }
+        .subTitle {
+            font-size: .8rem;
+            color: $deep-col;
+            line-height: 1.1rem;
+            font-weight: bold;
+        }
+        // 内容模板1内容
+        .temConLi {
+            font-size: .7rem;
+            color: $base-col;
+            line-height: 1.1rem;
+            margin-top: .4rem;
+        }
+    }
+}
+
+//选择器重置样式
+.birthday-model {
+    .dwbc {
+        &:after {
+            content: "请选择生日";
+            color: $deep-col;
+        }
+    }
+    .mbsc-ios7 .dw .dwwr .dwbc .dwb0 {
+        color: $diff-col;
+    }
+    .dwwc {
+        width: 100% !important;
+    }
+    .dwfl {
+        &:nth-of-type(1) {
+            .dw-i {
+                &:after {
+                    content: "年";
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            .dw-i {
+                &:after {
+                    content: "月";
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            .dw-i {
+                &:after {
+                    content: "日";
+                }
+            }
+        }
+    }
+}
+
+.scrollTwo {
+    .dwbc {
+        &:after {
+            content: "请选择身高";
+        }
+    }
+    .dwfl {
+        .dwwol {
+            &:after {
+                content: "厘米";
+            }
+        }
+    }
+}
+
+.scrollThree {
+    .dwbc {
+        &:after {
+            content: "请选择体重";
+        }
+    }
+    .dwfl {
+        .dwwol {
+            &:after {
+                content: "公斤";
+            }
+        }
+    }
+}
+
+.scrollFour {
+    .dwbc {
+        &:after {
+            content: "请选择腰围";
+        }
+    }
+    .dwfl {
+        .dwwol {
+            &:after {
+                content: "厘米";
+            }
+        }
+    }
+}
+
+.mbsc-ios7 {
+    .dwo {
+        background: rgba(0, 0, 0, .4);
+    }
+    .dw {
+        .dwwr {
+            background: $head-col;
+            padding-top: 3rem;
+            .dwbc {
+                border: none;
+                &:after {
+                    font-size: 0.85rem;
+                    color: $deep-col;
+                    line-height: 3rem;
+                }
+                .dwb {
+                    height: 3rem;
+                    font-size: 0.85rem;
+                    font-weight: normal;
+                    line-height: 3rem;
+                    padding: 0 0.75rem;
+                }
+                .dwb0 {
+                    color: $diff-col;
+                }
+                .dwb1 {
+                    color: $light-col;
+                }
+            }
+            .dwcc {
+                .dwwc {
+                    padding: 20px 0 20px 0;
+                    .dwfl {
+                        .dwwl {
+                            .dwww {
+                                padding: 1px 0;
+                                .dww {
+                                    .dw-ul {
+                                        .dw-bf {
+                                            .dw-li {
+                                                text-align: center;
+                                                font-size: 0.75rem;
+                                                color: $dis-col;
+                                                .dw-i {
+                                                    &:after {
+                                                        font-size: 0.75rem;
+                                                    }
+                                                }
+                                            }
+                                            .dw-sel {
+                                                font-size: 0.85rem;
+                                                color: $birth-col;
+                                                .dw-i {
+                                                    &:after {
+                                                        font-size: 0.85rem;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .dwwo {
+                                    background: none;
+                                }
+                            }
+                            .dwwol {
+                                line-height: 34px;
+                                margin: -18px 0 0 0;
+                                &:after {
+                                    font-size: 0.6rem;
+                                    margin-left: 3.8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+test {
+    color: #ffffff;
+}
